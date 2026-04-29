@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUAE | Diagnóstico</title>
+
+    <!-- FONTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Tenor+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="app">
+
+        <!-- INTRO -->
+        <section id="step-intro" class="step active">
+            <h1 class="premium-title">DUAE</h1>
+            <p class="body-text">Inicie seu diagnóstico editorial e estratégico.</p>
+            <button class="btn-primary" onclick="nextStep('step-q1')">Começar</button>
+        </section>
+
+        <!-- PERGUNTA -->
+        <section id="step-q1" class="step">
+            <span class="label">Pergunta 01</span>
+            <h2 class="question-text">Qual o foco principal da sua marca hoje?</h2>
+
+            <div class="input-wrapper">
+                <input type="text" id="ans-q1" placeholder="Sua resposta..." autocomplete="off">
+            </div>
+
+            <button class="btn-primary" onclick="showLoading()">Finalizar Diagnóstico</button>
+        </section>
+
+        <!-- RESULTADO -->
+        <section id="step-result" class="step">
+            <h2 class="premium-title">Seu diagnóstico</h2>
+
+            <div class="divider"></div>
+
+            <p id="result-type" class="result-highlight"></p>
+
+            <div class="divider"></div>
+
+            <p class="body-text" style="margin-bottom: 2rem;">
+                Sua marca está pronta para o próximo nível editorial.
+            </p>
+
+            <button class="btn-primary" onclick="goToWhatsApp()">
+                Falar no WhatsApp
+            </button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

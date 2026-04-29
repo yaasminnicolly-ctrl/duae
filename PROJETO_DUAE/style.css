@@ -1,0 +1,139 @@
+:root {
+    --avorio: #faf6ee;
+    --obsidiana: #0d0c0a;
+    --ouro-solar: #c9a84c;
+    --linho: #ebddd0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--avorio);
+    color: var(--obsidiana);
+    font-family: 'Tenor Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#app {
+    width: 100%;
+    max-width: 640px;
+    padding: 40px;
+    text-align: center;
+}
+
+/* STEPS */
+
+.step {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.step.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TEXT */
+
+.premium-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.body-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: rgba(13, 12, 10, 0.7);
+}
+
+.label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--ouro-solar);
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.question-text {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+}
+
+/* INPUT */
+
+.input-wrapper {
+    margin-bottom: 4rem;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--linho);
+    padding: 15px 0;
+    font-size: 1.2rem;
+    color: var(--obsidiana);
+    outline: none;
+    text-align: center;
+    transition: border-color 0.5s;
+}
+
+input:focus {
+    border-bottom: 1px solid var(--ouro-solar);
+}
+
+/* BUTTON */
+
+.btn-primary {
+    background: var(--obsidiana);
+    color: var(--avorio);
+    border: none;
+    padding: 20px 50px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.03);
+    background: #1a1a1a;
+}
+
+/* DIVIDER */
+
+.divider {
+    height: 1px;
+    background: var(--ouro-solar);
+    width: 60px;
+    margin: 2.5rem auto;
+    opacity: 0.5;
+}
+
+/* RESULT */
+
+.result-highlight {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
